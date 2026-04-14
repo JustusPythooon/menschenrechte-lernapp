@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Menschenrechte in China – Lern-App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginScreen" class="login">
+  <h1>📘 Menschenrechte in China</h1>
+  <p class="subtitle">Lern-App • 8. Klasse Realschule (LehrplanPLUS)</p>
+  <input id="nick" placeholder="Nickname">
+  <input id="pass" type="password" placeholder="Passwort">
+  <label class="privacy"><input type="checkbox" id="privacyCheck"> Datenschutz akzeptieren</label>
+  <button onclick="register()">Registrieren</button>
+  <button class="secondary" onclick="login()">Login</button>
+  <p id="loginMsg"></p>
+</div>
+
+<div id="app" class="hidden">
+<header class="topbar">
+<h2>Hallo <span id="userName"></span> 👋</h2>
+<nav>
+<button data-page="home" class="active">Start</button>
+<button data-page="topics">Themen</button>
+<button data-page="timeline">Zeitstrahl</button>
+<button data-page="quiz">Quiz</button>
+<button data-page="videos">Videos</button>
+<button data-page="sources">Quellen</button>
+<button class="secondary" onclick="logout()">Logout</button>
+</nav>
+</header>
+<main>
+<section id="home" class="page show"></section>
+<section id="topics" class="page"></section>
+<section id="timeline" class="page"></section>
+<section id="quiz" class="page"></section>
+<section id="videos" class="page"></section>
+<section id="sources" class="page"></section>
+</main>
+<footer>Offline-Lern-App • Schulprojekt</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
